@@ -1,0 +1,54 @@
+<li>
+    <p>
+        <div class="student-info">
+          <div id="student-data">
+            <a><strong>Name:</strong> <%= student.name %>,</a>
+            <a><strong>Batch:</strong> <%= student.batch %>,</a>
+            <a><strong>Email:</strong> <%= student.email %>,</a>
+            <br>
+            <br>
+            <a><strong>College:</strong> <%= student.college %>,</a>
+            <a><strong>Placement Status:</strong> <%= student.status %>,</a>
+            <br>
+            <br>
+            <a><strong>DSA Score:</strong> <%= student.dsa_score %>/100,</a>
+            <a><strong>WebD Score:</strong> <%= student.webd_score %>/100,</a>
+            <a><strong>React Score:</strong> <%= student.react_score %>/100,</a>
+          </div>
+          <div>
+            <% if (locals.user && locals.user.id == student.user.id) { %>
+              <small>
+                <a class="delete-student-button" href="/students/destroy/<%= student._id %>">X</a>
+              </small>
+            <% } %>
+          </div>
+        </div>
+      </p>
+      <div class="student-interviews-list">
+        <ul id="student-interviews-<%= student._id %>">
+          <% for (interview of student.interviews) { %>
+            <%- include('_interview') -%>
+          <% } %>
+        </ul>
+      </div>
+      <div class="student-interviews">
+        <% if (locals.user) { %>
+            <h4>Allocate Interviews from here</h4>
+            <form action="/interview/create" method="POST">
+                <input type="text" name="company" placeholder="Enter Company name" required>
+                <input type="date" name="interview_date" required>
+                <input type="hidden" name="student" value="<%= student._id %>">
+        
+                <select id="result" name="result" required>
+                <option value="PASS">PASS</option>
+                <option value="FAIL">FAIL</option>
+                <option value="On Hold">On Hold</option>
+                <option value="Didn't Attempt">Didn't Attempt</option>
+                </select>
+        
+                <input type="submit" value="Allocate Interview">
+            </form>
+        <% } %>
+      </div>
+
+</li>

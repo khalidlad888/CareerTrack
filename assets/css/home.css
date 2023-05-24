@@ -1,0 +1,164 @@
+#home-container {
+  display: flex;
+  background-color: white;
+}
+
+#home-container #students-data-section {
+  width: 70%;
+  padding: 10px;
+}
+
+#home-container #jobs-from-api {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#students-data-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#students-data-form-container {
+  margin-bottom: 40px;
+}
+
+form {
+  display: inline;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+input[type="number"],
+input[type="date"] {
+  width: auto;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+li:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#student-data{
+  padding: 5px;
+}
+
+#student-data a {
+  margin: 10px;
+}
+
+.student-info a {
+  margin-right: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+
+.student-info small {
+  font-size: 12px;
+}
+
+.interview-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.interview-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.interview-item strong {
+  font-weight: bold;
+}
+
+.interview-item a {
+  margin-right: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+header{
+  font-family: 'Times New Roman', Times, serif;
+}
+header li{
+  background-color: transparent;
+}
+header li:nth-child(even){
+  background-color: transparent;
+}

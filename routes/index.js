@@ -10,6 +10,10 @@ console.log('Router is loaded')
 router.get('/', homeController.home);
 //require users route
 router.use('/users', require('./users'));
+//require student route
+router.use('/students', require('./students'));
+//require interview route
+router.use('/interview', require('./interview'));
 
 
 //Exporting router to use
