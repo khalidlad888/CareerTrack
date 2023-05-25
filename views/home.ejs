@@ -59,11 +59,16 @@
                     <%}%>
                     
                 </ul>
-            </div>            
+            </div>
+            <div id="download-button-div">
+                <%if(locals.user) {%>
+                    <a href="/students/download" id="download-button">Download the data here</a>
+                <%}%>
+            </div>
     </section>
     <section id="jobs-from-api">
         <h3>
-            Available jobs in India
+            Available Jobs in India
         </h3>
 
     </section>

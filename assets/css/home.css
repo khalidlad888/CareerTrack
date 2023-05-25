@@ -162,3 +162,21 @@ header li{
 header li:nth-child(even){
   background-color: transparent;
 }
+
+#download-button-div{
+  height: auto;
+  width: fit-content;
+  padding: 12px;
+  background-color: #1877f2;
+  border-radius: 5px;
+}
+
+#download-button-div:hover{
+  cursor: pointer;
+  background-color: #166fe5;
+}
+
+#download-button{
+  text-decoration: none;
+  color: white;
+}
