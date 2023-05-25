@@ -48,6 +48,8 @@
                     <input type="submit" value="Submit">
                   </form>                  
             </div>
+            <%}else{%>
+                <strong>Please Sign-in or Sign-up to add students data</strong>
             <%}%>
             <div>
                 <h2>Students Data</h2>
@@ -60,11 +62,11 @@
                     
                 </ul>
             </div>
-            <div id="download-button-div">
-                <%if(locals.user) {%>
-                    <a href="/students/download" id="download-button">Download the data here</a>
-                <%}%>
+            <%if(locals.user) {%>
+            <div id="download-button-div">       
+                    <a href="/students/download" id="download-button">Download the data here</a>    
             </div>
+            <%}%>
     </section>
     <section id="jobs-from-api">
         <h3>
