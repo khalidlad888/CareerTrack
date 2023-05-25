@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://careertrack.onrender.com/careertrack_database');
+mongoose.connect('mongodb+srv://khalidlad888:khalid12345@cluster0.gwmv7nt.mongodb.net/?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
